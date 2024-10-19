@@ -1,0 +1,168 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Tab Logo -->
+    <link rel="icon" href="{% static 'img/Logos/TabTop2Logo.png' %}" type="image/gif" sizes="18x18">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>BikeInvites {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/customer.css' %}">
+    <script src="{% static 'js/customer.js' %}" type="text/javascript"></script>
+
+</head>
+
+<body>
+    <div class="hero-img1"></div>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark" style="font-size: larger;" aria-label="" aria-labbelledby="">
+        <a class="navbar font-weight-bold" style="color: #C7C8CC;">BikeInvites</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/" onclick="onclickOnSection(event)" style="color: #f1f1f1;">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/" onclick="focusOnSection(event)" style="color: #f1f1f1;">vehicle Details</a>
+
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/" onclick="clickOnSection(event)" style="color: #f1f1f1;">About Us</a>
+
+                </li>
+            </ul>
+
+            <ul class="navbar-nav justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link" href="signin" style="color: #f1f1f1;">Sign in</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <h1 id="he1">Get Bike Rental Services From Bike Invites</h1>
+        <p>Start your journey with our exciting offers</p>
+        <a href="#" class="get">Get Started</a>
+        <button class="button" type="button">
+            <span class="button-text">Find Out More</span>
+        </button>
+    </section>
+    <script>
+      function onclickOnSection(event) {
+          event.preventDefault(); // Prevent default link behavior
+          var section = document.getElementById("home");
+            section.scrollIntoView({ behavior: 'smooth' }); // Scrolls to the section smoothly
+      }
+      function focusOnSection(event) {
+          event.preventDefault(); // Prevent default link behavior
+          var section = document.getElementById("vehicle_det");
+            section.scrollIntoView({ behavior: 'smooth' }); // Scrolls to the section smoothly
+      }
+      function clickOnSection(event) {
+          event.preventDefault(); // Prevent default link behavior
+          var section = document.getElementById("about");
+            section.scrollIntoView({ behavior: 'smooth' }); // Scrolls to the section smoothly
+      } 
+    </script>
+    <div id="vehicle_det" class="container-fluid">
+        <h4 id="he">OUR FLEET</h4>
+        <div class="row">
+            <div class="col-sm-12">
+                {% block pagecontent %} {% endblock pagecontent %}
+            </div>
+        </div>
+        <!-- pagination -->
+    </div>
+
+    <div id="about" class="container-fluid">
+        <h4 id="he">About Us</h4>
+        <div class="row">
+            <div class="col">
+                <div class="hero-img2"></div>
+            </div>
+            <div class="col">
+              <h5 class="about">BikeInvites is a leading Motorbike rental that offers a diversified and exceptional range of two-wheelers, Cars, Bicycles and Furniture on rent. Travellers with a spirit governed by an intense passion for riding different bikes, Cars, and Bicycles have just landed in the right place. We also offer a range of furniture for rent. We are regarded as one of the best rental companies in India due to our personalized service and higher commitment levels.<br><br>We have a massive store of exclusive Bikes, Scooty, Cars, Bicycles and Furniture where customers can rent hourly, daily, weekly, or monthly.
+                <br><br>You can go on a long ride and have an enjoyable trip for consecutive days by renting your favourite vehicles. Our company offers competitive pricing and optimum quality vehicles that provide an exquisite experience. We have a pool of scooters, bikes, motorcycles, cars, and furniture to suit customers' requirements and specifications. Our customer-oriented approach enables us to fulfil your distant dreams and serve beyond your expectations levels.
+                <br><br>Our incredible deals and perfect offers have helped us gain customers' trust and reliance. We have continuously been upgrading our online store with the latest collection of rental products. You can now choose any product within your budget and preferences. We believe in seeing our customers happy and satisfied with our service.Dreams need vision more than money. If you own a Splendor and wish to ride a Bullet, a temporary absence or a long-term desire should not hinder you. You can contact BikeInvites.
+              </h5>
+              </div>
+        </div>
+    </div>
+
+      <!-- Site footer -->
+    <footer class="site-footer">
+      <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <h6>About</h6>
+              <p class="text-justify">BikeInvites is a leading Motorbike rental that offers a diversified and exceptional range of two-wheelers, Cars, Bicycles and Furniture on rent. Travellers with a spirit governed by an intense passion for riding different bikes, Cars, and Bicycles have just landed in the right place. We also offer a range of furniture for rent. We are regarded as one of the best rental companies in India due to our personalized service and higher commitment levels.</p>
+            </div>
+  
+            <div class="col-xs-6 col-md-3">
+              {% comment %} <h6>Categories</h6>
+              <ul class="footer-links">
+                <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
+                <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
+                <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
+                <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
+                <li><a href="http://scanfcode.com/category/android/">Android</a></li>
+                <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
+              </ul> {% endcomment %}
+            </div>
+  
+            <div class="col-xs-6 col-md-3">
+              <h6>Quick Links</h6>
+              <ul class="footer-links">
+                <li><a href="http://scanfcode.com/about/">About Us</a></li>
+                <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+                <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
+                <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+                <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+              </ul>
+            </div>
+          </div>
+          <hr>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+              <p class="copyright-text">Copyright &copy; 2024 All Rights Reserved by 
+           <a href="#">BikeInvites</a>.
+              </p>
+            </div>
+  
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <ul class="social-icons">
+                <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+              </ul>
+            </div>
+          </div>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN " crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin="anonymous "></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl " crossorigin="anonymous "></script>
+</body>
+
+</html>
